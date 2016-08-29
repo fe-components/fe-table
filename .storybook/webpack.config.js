@@ -1,10 +1,18 @@
 const webpack = require('webpack')
 const path = require('path')
+const fs = require('fs')
 const root = __dirname
 const paths = {
   src: path.join(root, '../src'),
   dist: path.join(root, '../dist')
 }
+const base = path.join(__dirname, '..')
+const modules = `${base}/node_modules`
+
+let internalModules = fs.readdirSync(modules)
+  .filter(folder => !!~folder.indexOf('fe-'))
+  .map(folder => `${modules}/${folder}`)
+paths.src = internalModules.concat(paths.src)
 
 module.exports = {
   plugins: [

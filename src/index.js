@@ -1,8 +1,10 @@
 import React, { Component, PropTypes } from 'react'
 import Tcell from './Tcell.js'
+import Spinner from './spinner.js'
 
 import CSSModules from 'react-css-modules'
 import styles from './index.styl'
+import 'fe-reset'
 
 @CSSModules(styles, { allowMultiple: true, errorWhenNotFound: false })
 
@@ -92,7 +94,7 @@ export class Etable extends Component {
     let data = this.props.data
     return (
       <div styleName='warp'>
-        {data.loading ? <div styleName='tableLoading'><div styleName='spinner'></div></div> : null}
+        {data.loading ? <div styleName='tableLoading'><Spinner /></div> : null}
         <table onClickCapture={this.handleClick.bind(this)} onDoubleClickCapture={this.handleClick.bind(this)}>
           {this.renderTitle(data.title)}
           <thead>

@@ -31,7 +31,7 @@ export default class extends Component {
     switch (data.type) {
       case 'input':
         return <input
-          {...props}
+          data-map={props['data-map']}
           type='text'
           {...data.props}
           disabled={this.props.loading}
@@ -53,7 +53,7 @@ export default class extends Component {
         </span>
 
       default:
-        return <span {...props}>{this.renderValue(value)}</span>
+        return <span data-map={props['data-map']}>{this.renderValue(value)}</span>
     }
   }
 }

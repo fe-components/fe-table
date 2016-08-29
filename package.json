@@ -25,7 +25,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:fe-components/fe-table.git"
+    "url": "git@github.com:fe-components/fe-pagination.git"
   },
   "devDependencies": {
     "@kadira/storybook": "^2.5.1",
@@ -70,6 +70,7 @@
     "webpack-dev-server": "^2.0.0-beta"
   },
   "dependencies": {
+    "fe-reset": "^1.0.5",
     "fe-select": "^1.0.7",
     "react": "^15.0.2",
     "react-dom": "^15.0.2"

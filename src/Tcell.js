@@ -18,6 +18,6 @@ export default class extends Component {
 
     return (this.props.data.fastEdit || this.props.editing)
       ? <EditableArea {...props} />
-      : <span {...props}>{this.renderValue(value)}</span>
+      : <span data-map={props['data-map']}>{this.renderValue(value)}</span>
   }
 }
