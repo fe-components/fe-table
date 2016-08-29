@@ -1,0 +1,62 @@
+.warp
+  width 100%
+  position relative
+  table
+    width 100%
+    td, th
+      border 1px solid #ddd
+      text-align center
+      vertical-align middle
+      padding 0.5em 0
+    tr:nth-child(even)
+      background #fafbfd - 5%
+    thead tr
+      background #ebecf0
+      
+    input 
+      border none
+      border 1px solid #ccc
+      line-height 32px
+      padding 0 0.5em
+      width 100%
+      font-size 13px
+
+.tableLoading
+  position absolute
+  z-index 2
+  top 0
+  width 100%
+  height 100%
+  background-color rgba(0, 0, 0, 0.2)
+  text-align center
+  min-height 250px
+
+.spinner
+  width 60px
+  height 60px
+  background-color #fff
+  transform translate(-50% + 30px, -50% + 30px)
+  position absolute
+  left calc(50% - 30px)
+  top calc(50% - 30px)
+  -webkit-animation rotateplane 1.2s infinite ease-in-out
+  animation rotateplane 1.2s infinite ease-in-out
+ 
+@-webkit-keyframes rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+ 
+@keyframes rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+  } 50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+  } 100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
