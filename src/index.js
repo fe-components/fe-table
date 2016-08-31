@@ -78,7 +78,9 @@ export class Etable extends Component {
         (r, j) =>
           <td
             key={j}
-            data-map={'body-' + i + '-' + j}>
+            data-map={'body-' + i + '-' + j}
+            colSpan={r.colSpan}
+            rowSpan={r.rowSpan} >
             <Tcell
               data-map={'body-' + i + '-' + j}
               onChange={this.changeCell.bind(this)}

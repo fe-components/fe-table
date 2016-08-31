@@ -7,10 +7,10 @@ import {
 import Etable from '../src/'
 
 let data = {
-  head: [{value: '日期', props: {onBlur: () => { console.log('bind obBlur in data tree') }, onClick: () => { console.log('bind onClick in data tree') }}, editable: true, type: 'input'}, {value: '姓名', editable: true, type: 'select', 'options': [{name: '王聪1', value: '王聪1'}, {name: '王聪2', value: '王聪2'}]}],
+  head: [{value: '日期', props: {onBlur: () => { console.log('bind obBlur in data tree') }, onClick: () => { console.log('bind onClick in data tree') }}, editable: true, type: 'input'}, {value: '王聪1', editable: true, type: 'select', 'options': [{label: '王聪1', value: '王聪1'}, {label: '王聪2', value: '王聪2'}]}],
   body: [
-    {isShow: true, data: [{value: '2016-01-01'}, {value: '王聪1'}]},
-    {isShow: true, data: [{value: '2016-01-02'}, {value: '王聪2', editable: true, type: 'input'}]},
+    {isShow: true, data: [{value: '2016-01-01', rowSpan: 2}, {value: '王聪1'}]},
+    {isShow: true, data: [{value: '王聪2', editable: true, type: 'input'}]},
     {isShow: true, data: [{value: '2016-01-02'}, {value: '百度', editable: true, type: 'link', url: 'www.baidu.com'}]},
     {isShow: true, data: [{value: '2016-01-02'}, {value: [{value: '百度1', url: 'www.baidu.com', props: {style: {color: 'red'}}}, {value: '百度2', url: 'www.baidu.com'}], editable: true, type: 'links'}]}
   ]
